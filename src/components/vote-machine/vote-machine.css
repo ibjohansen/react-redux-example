@@ -1,0 +1,33 @@
+.container{
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+    display: block;
+    margin: 25% 25% auto 25%;
+}
+.vote-machine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    border: 1px solid grey;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 10px 10px 5px 0px rgba(163,163,163,1);
+}
+
+.votes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+i {
+    font-size: xx-large;
+    margin: 1em;
+}
+
