@@ -9,6 +9,10 @@ to run:
 
 `$ npm run start`
 
+and in a separate terminal
+
+`$ npm run start:backend`
+
 then navigate to localhost:8080
 
 to build for production

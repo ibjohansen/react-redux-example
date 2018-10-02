@@ -4,13 +4,26 @@ import './vote-machine.css'
 import {Button} from '../button'
 
 export class VoteMachine extends Component {
-  render() {
-    const {value, onUpVoteClick, onDownVoteClick} = this.props
 
+  componentDidMount(){
+    const {onUpdateVotes} = this.props
+
+    fetch('http://localhost:3000')
+      .then((response) => {
+        return response.json();
+      })
+      .then((json) => {
+        const {votes} = json
+        onUpdateVotes({value: votes})
+      });
+  }
+
+  render() {
+    const {votes, onUpVoteClick, onDownVoteClick} = this.props
     return (
       <div className="container">
         <div className="vote-machine">
-          <div className="votes">{value}</div>
+          <div className="votes">{votes}</div>
           <div className="panel">
             <Button type="button" name="btn_upvote" onClick={onUpVoteClick}>
               <i className="fas fa-thumbs-up"/>
@@ -26,7 +39,7 @@ export class VoteMachine extends Component {
 }
 
 VoteMachine.propTypes = {
-  value: PropTypes.number.isRequired,
+  votes: PropTypes.number.isRequired,
   onUpVoteClick: PropTypes.func.isRequired,
   onDownVoteClick: PropTypes.func.isRequired
 }
