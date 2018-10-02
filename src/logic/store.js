@@ -2,7 +2,7 @@ import {createStore} from 'redux'
 import {voter} from './reducers'
 import {upVoteAction, downVoteAction} from './actions'
 
-//exportert funksjon som oppretter store, legg merke til at vi i tilleg bruker
+// Exportert funksjon som oppretter store, legg merke til at vi i tilleg bruker
 // https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
 // dette vil vi ikke gjøre i produksjon, så det bør være logikk som ikke tar med denne med mindre
 // man kjører i dev.

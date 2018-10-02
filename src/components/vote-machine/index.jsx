@@ -10,18 +10,12 @@ export class VoteMachine extends Component {
     return (
       <div className="container">
         <div className="vote-machine">
-          <div className='votes'>{value}</div>
-          <div className='panel'>
-            <Button
-              type='button'
-              name='btn_upvote'
-              onClick={onUpVoteClick}>
+          <div className="votes">{value}</div>
+          <div className="panel">
+            <Button type="button" name="btn_upvote" onClick={onUpVoteClick}>
               <i className="fas fa-thumbs-up"/>
             </Button>
-            <Button
-              type='button'
-              name='btn_downvote'
-              onClick={onDownVoteClick}>
+            <Button type="button" name="btn_downvote" onClick={onDownVoteClick}>
               <i className="fas fa-thumbs-down"/>
             </Button>
           </div>
