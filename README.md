@@ -7,7 +7,7 @@ install with npm
 
 to run open a terminal window:
 
-`$ npm run start:backend`
+`$ npm run start:server`
 
 and in a separate terminal window
 
