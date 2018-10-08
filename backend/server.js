@@ -10,4 +10,4 @@ app.use(cors())
 
 app.get('/', (req, res) => res.send(data))
 
-app.listen(port, () => console.log(`Backend listeing on  ${port}, serving up 10 votes`))
+app.listen(port, () => console.log(`Backend listening on  ${port}, serving up 10 votes`))
