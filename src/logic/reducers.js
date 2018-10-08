@@ -1,12 +1,13 @@
 import {UP_VOTE, DOWN_VOTE, UPDATE_VOTES} from './action-types'
 
 // Reducer: voter
-// en funksjon som tar state (defaulter til 0) og en action
+// en funksjon som tar state (med en initial state = 0) og en action
+// (når reduceren kalles første gang kalles den med undefined state av Redux)
 // basert på action.type, øker eller reduserer state-variablene count med 1
 
 export const voter = (state = {votes: 0}, action) => {
 
-  const votes = state.votes
+  const votes = Objec.assign({}, state.votes)
 
   switch (action.type) {
     case UP_VOTE:
