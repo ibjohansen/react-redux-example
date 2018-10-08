@@ -5,11 +5,6 @@ import {Button} from '../button'
 
 export class VoteMachine extends Component {
 
-  constructor(props) {
-    super(props)
-  }
-
-
   componentDidMount() {
     const {onUpdateVotes} = this.props
 
