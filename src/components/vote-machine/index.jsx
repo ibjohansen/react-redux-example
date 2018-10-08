@@ -4,6 +4,25 @@ import './vote-machine.css'
 import {Button} from '../button'
 
 export class VoteMachine extends Component {
+
+  constructor(props) {
+    super(props)
+  }
+
+
+  componentDidMount() {
+    const {onUpdateVotes} = this.props
+
+    fetch('http://localhost:3000')
+      .then((response) => {
+        return response.json()
+      })
+      .then((json) => {
+        const {votes} = json
+        onUpdateVotes({value: votes})
+      })
+  }
+
   render() {
     const {votes, onUpVoteClick, onDownVoteClick} = this.props
     return (

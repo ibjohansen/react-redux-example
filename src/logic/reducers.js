@@ -1,4 +1,4 @@
-import {UP_VOTE, DOWN_VOTE} from './action-types'
+import {UP_VOTE, DOWN_VOTE, UPDATE_VOTES} from './action-types'
 
 // Reducer: voter
 // en funksjon som tar state (defaulter til 0) og en action
@@ -14,6 +14,10 @@ export const voter = (state = {votes: 0}, action) => {
 
     case DOWN_VOTE:
       return {votes: votes - 1}
+
+    case UPDATE_VOTES:
+      const {value} = action.payload
+      return {votes: value}
 
     default:
       return state

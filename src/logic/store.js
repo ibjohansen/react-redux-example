@@ -1,6 +1,6 @@
 import {createStore} from 'redux'
 import {voter} from './reducers'
-import {upVoteAction, downVoteAction} from './action-creators'
+import {upVoteAction, downVoteAction, updateVotes} from './action-creators'
 
 // Exportert funksjon som oppretter store, legg merke til at vi i tilleg bruker
 // https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
@@ -26,6 +26,7 @@ export const mapStateToProps = (state) => {
 export const mapDispatchToProps = (dispatch) => {
   return {
     onUpVoteClick: () => dispatch(upVoteAction()),
-    onDownVoteClick: () => dispatch(downVoteAction())
+    onDownVoteClick: () => dispatch(downVoteAction()),
+    onUpdateVotes: (value) => dispatch(updateVotes(value))
   }
 }

@@ -7,7 +7,13 @@ install with npm
 
 to run:
 
-`$ npm run start`
+`$ npm run start:backend`
+
+and in a separate terminal
+
+`$ npm run start:basic`
+or
+`$ npm run start:redux`
 
 then navigate to localhost:8080
 
