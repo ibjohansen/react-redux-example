@@ -23,4 +23,4 @@ to build for production
 
 `$ npm run build`
 
-to inspect redux actions, use [Redux DevTools, Chrome extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+to inspect redux actions on Chrome, use [Redux DevTools, Chrome extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
