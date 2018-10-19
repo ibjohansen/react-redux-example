@@ -1,4 +1,4 @@
-// En veldig enkel backend for å emulere en backend som backend opp data
+// En veldig enkel backend
 
 const express = require('express')
 const app = express()
